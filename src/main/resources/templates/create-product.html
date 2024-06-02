@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Product</title>
+</head>
+<body>
+<h1>Create Product</h1>
+<form th:action="@{/product/create}" th:object="${productCreateDTO}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" />
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input type="text" id="description" th:field="*{description}" />
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input type="text" id="price" th:field="*{price}" />
+    </div>
+    <div>
+        <label for="discount">Discount:</label>
+        <input type="text" id="discount" th:field="*{discount}" />
+    </div>
+    <div>
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl" th:field="*{imageUrl}" />
+    </div>
+<!--    <div>-->
+<!--        <label for="isHot">Hot Product:</label>-->
+<!--        <input type="checkbox" id="isHot" th:field="*{isHot}" />-->
+<!--    </div>-->
+    <div>
+        <label for="categories">Categories:</label>
+<!--        <select id="categories" th:field="*{category}" multiple="multiple">-->
+<!--            <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>-->
+<!--        </select>-->
+        <input type="text" id="categories" th:field="*{category}" />
+    </div>
+    <div>
+        <button type="submit">Create</button>
+    </div>
+</form>
+</body>
+</html>

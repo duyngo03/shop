@@ -1,0 +1,95 @@
+<header class="header trans_300" th:fragment="header">
+
+    <!-- Main Navigation -->
+
+    <div class="main_nav_container sticky-top">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="logo_container">
+                    <a href="/">Cir<span>cus</span></a>
+                </div>
+                <div class="search-form">
+                    <form th:action="@{/home}" class="form-inline my-2 my-lg-0" method="get">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                               name="keyword" id="keyword">
+                        <button id="search-button" class="btn my-2 my-sm-0" type="submit"><i class="fa fa-search"
+                                                                                             aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar_menu">
+                        <li><a th:href="@{/}">Trang chủ</a></li>
+                        <!--                        <li><a th:href="@{/shopping/shop}">Sản phẩm</a></li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" th:href="@{category/1}">VẬT DỤNG DECOR</a>
+                                    <a class="items">Điện thoại cổ</a>
+                                    <a class="items">Đồng hồ để bàn</a>
+                                    <a class="items">Đồng hồ treo tường</a>
+                                    <a class="items">Hộp tủ, vali trang trí</a>
+                                    <a class="items">Kệ, giá đỡ trang trí</a>
+                                    <a class="items">Đèn trang trí</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">ĐỒ TRANG TRÍ NỘI THẤT</a>
+                                    <a class="items">Điện thoại cổ</a>
+                                    <a class="items">Đồng hồ để bàn</a>
+                                    <a class="items">Đồng hồ treo tường</a>
+                                    <a class="items">Hộp tủ, vali trang trí</a>
+                                    <a class="items">Kệ, giá đỡ trang trí</a>
+                                    <a class="items">Đèn trang trí</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">VẬT DỤNG GIA DỤNG</a>
+                                    <a class="items">Điện thoại cổ</a>
+                                    <a class="items">Đồng hồ để bàn</a>
+                                    <a class="items">Đồng hồ treo tường</a>
+                                    <a class="items">Hộp tủ, vali trang trí</a>
+                                    <a class="items">Kệ, giá đỡ trang trí</a>
+                                    <a class="items">Đèn trang trí</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">VẢI, THẢM TRANG TRÍ</a>
+                                    <a class="items">Điện thoại cổ</a>
+                                    <a class="items">Đồng hồ để bàn</a>
+                                    <a class="items">Đồng hồ treo tường</a>
+                                    <a class="items">Hộp tủ, vali trang trí</a>
+                                    <a class="items">Kệ, giá đỡ trang trí</a>
+                                    <a class="items">Đèn trang trí</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">TRANG TRÍ NỘI THẤT</a>
+                                    <a class="items">Điện thoại cổ</a>
+                                    <a class="items">Đồng hồ để bàn</a>
+                                    <a class="items">Đồng hồ treo tường</a>
+                                    <a class="items">Hộp tủ, vali trang trí</a>
+                                    <a class="items">Kệ, giá đỡ trang trí</a>
+                                    <a class="items">Đèn trang trí</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a th:href="@{/contact}">Mẹo|Bài viết</a></li>
+                        <li><a th:href="@{/contact}">Giới thiệu</a></li>
+                        <li><a th:href="@{/contact}">Liên hệ</a></li>
+                    </ul>
+
+                    <!--                    <ul class="navbar_user">-->
+                    <!--                        <li><a th:href="@{/login}"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
+                    <!--                        <li class="checkout">-->
+                    <!--                            <a th:href="@{/login}">-->
+                    <!--                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+                    <!--                            </a>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                    <div class="hamburger_container">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
