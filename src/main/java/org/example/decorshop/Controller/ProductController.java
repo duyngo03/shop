@@ -11,7 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/product")
@@ -67,6 +69,16 @@ public class ProductController {
     @GetMapping("/{id}")
     public String product(@PathVariable Integer id, Model model) {
         Product product = productService.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid product Id:" + id));
+        Set<Product> sameProducts = new HashSet<>();
+        for (Category category : product.getCategories()) {
+            Set<Product> products = productService.findAllByCategories(category);
+            sameProducts.addAll(products);
+        }
+        sameProducts.remove(product);
+        Product fistProduct = sameProducts.iterator().next();
+        sameProducts.remove(fistProduct);
+        model.addAttribute("fistProduct", fistProduct);
+        model.addAttribute("sameProducts", sameProducts);
         model.addAttribute("product", product);
         return "product";
     }

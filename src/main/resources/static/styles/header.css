@@ -1,0 +1,111 @@
+.main_nav_container {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.logo_container a {
+    font-size: 24px;
+    color: #1e1e27;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo_container a span {
+    color: #fe4c50;
+}
+
+.form-control {
+    color: #db5246;
+}
+
+#keyword {
+    width: 500px;
+    border-right-style: none;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding-left: 5%;
+}
+
+#search-button {
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(206, 212, 218);
+}
+
+.navbar {
+    width: auto;
+    height: 83px;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar_menu li {
+    display: inline-block;
+}
+
+.navbar_menu li a {
+    display: block;
+    color: #1e1e27;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.navbar_menu li a:hover {
+    color: #b5aec4;
+    cursor: pointer;
+}
+
+.hamburger_container {
+    display: none;
+    margin-left: 40px;
+}
+
+.hamburger_container i {
+    font-size: 24px;
+    color: #1e1e27;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.hamburger_container:hover i {
+    color: #b5aec4;
+}
+
+.search-form form {
+    display: flex;
+}
+
+.dropdown:hover .dropdown-menu {
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 0 30%;
+}
+
+.items {
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
