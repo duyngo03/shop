@@ -12,28 +12,28 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "product")
 public class Product {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int id;
+    @Id
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @Column(name = "name")
-    public String name;
+    private String name;
 
     @Column(name = "description", columnDefinition="text")
-    public String description;
+    private String description;
 
     @Column(name = "price")
-    public double price;
+    private double price;
 
     @Column(name = "discount")
-    public double discount;
+    private double discount;
 
     @Column(name = "imageUrl")
-    public String imageUrl;
+    private String imageUrl;
 
     @Column(name = "isHot")
-    public boolean isHot;
+    private boolean isHot;
 
     @ManyToMany
     @JoinTable(
@@ -41,6 +41,6 @@ public class Product {
             joinColumns = @JoinColumn(name = "product_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    public List<Category> categories;
+    private List<Category> categories;
 
 }

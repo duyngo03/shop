@@ -1,0 +1,58 @@
+.product-container {
+    display: flex;
+    padding-top: 50px;
+    margin: 0 20%;
+    gap:30px;
+}
+.product-image img {
+    width: 500px
+}
+.product-name {
+    font-size: 38px;
+}
+.product-price {
+    font-size: 28px;
+    color: #dd9933;
+
+}
+.add-to-cart {
+    background: #d45d26 !important;
+    border: 2px solid #d45d26 !important;
+    border-radius: 60px;
+    padding: 15px 100px;
+    color: white;
+    margin-bottom: 20px;
+}
+.calling {
+    font-weight: 700;
+    font-size: 14px;
+}
+.phone-number {
+    color: #e60000;
+    font-size: 14px;
+}
+.loved {
+    font-size: 14px;
+}
+.loved:hover {
+    color: #e60000;
+}
+.benefit {
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #585858;
+    display: block;
+    width: 100%;
+    float: left;
+    background: #f2f2f2;
+    padding: 15px 10px;
+}
+
+.benefit_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.benefit_item div p {
+    margin: 0;
+}

@@ -19,7 +19,10 @@ public class HomeController {
     public String home(Model model) {
         List<Product> products = productService.findAll();
         products = products.stream().filter(Product::isHot).toList();
-        Product firstHotProduct = products.get(0);
+        Product firstHotProduct = new Product();
+        if(products.size() != 0) {
+            firstHotProduct = products.get(0);
+        }
         products = products.stream().skip(0).toList();
         model.addAttribute("firstHotProducts", firstHotProduct);
         model.addAttribute("hotProducts", products);

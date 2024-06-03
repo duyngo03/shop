@@ -36,7 +36,7 @@ public class ProductController {
     public String createProduct(@ModelAttribute("productDTO") ProductCreateDTO productCreateDTO) {
         try {
             // Create product
-            Product  product = new Product();
+            Product product = new Product();
             product.setName(productCreateDTO.getName());
             product.setPrice(productCreateDTO.getPrice());
             product.setDescription(productCreateDTO.getDescription());
@@ -61,7 +61,7 @@ public class ProductController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "index";
+        return "contact";
     }
 
     @GetMapping("/{id}")
