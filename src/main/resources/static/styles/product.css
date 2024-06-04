@@ -174,3 +174,20 @@ a:link {
     font-weight: 400;
     font-size: 1rem;
 }
+
+.quantity {
+    margin-bottom: 20px;
+    border: solid 1px black;
+    width: 105px;
+    border-radius: 5px;
+    padding-left: 2px;
+}
+.quantity button {
+    border: none;
+    background-color: #FFFFFF;
+}
+.quantity input {
+    border: none;
+    width: 50px;
+    text-align: center;
+}

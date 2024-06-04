@@ -167,22 +167,47 @@
 
     <!-- Products-->
     <div class="products">
-        <div class="card" style="width: 18rem;" th:each=" product : ${products}">
-            <a th:href="@{/product/{id}(id=${product.id})}">
-                <img src="/image/tshirt.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text" th:text="${product.name}"></p>
-                    <p class="card-text" th:text="${product.price}"></p>
-                </div>
-            </a>
+        <div class="product" style="width: 18rem;" th:each=" product : ${products}" onmouseover="handleMouseOver(event)" onmouseout="handleMouseOut(event)">
+            <div class="card" >
+                <a th:href="@{/product/{id}(id=${product.id})}">
+                    <img src="/image/tshirt.png" class="card-img-top" alt="...">
+                </a>
+
+            </div>
+            <div class="card-body" >
+                <p class="card-text product_name" th:text="${product.name}"></p>
+                <p class="card-text product_price" th:text="${product.price}"></p>
+            </div>
         </div>
+
+
+<!--        <div class="card" style="width: 18rem;" th:each=" product : ${products}">-->
+<!--            <a th:href="@{/product/{id}(id=${product.id})}">-->
+<!--                <img src="/image/tshirt.png" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <p class="card-text" th:text="${product.name}"></p>-->
+<!--                    <p class="card-text" th:text="${product.price}"></p>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--        </div>-->
     </div>
 </div>
-
+<footer th:replace="fragment/footer" :: footer></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 <script>
+    function handleMouseOver(event) {
+        const priceElement = event.currentTarget.querySelector('.product_price');
+        priceElement.dataset.originalPrice = priceElement.textContent;
+        priceElement.textContent = 'Thêm vào giỏ hàng';
+    }
+
+    function handleMouseOut(event) {
+        const priceElement = event.currentTarget.querySelector('.product_price');
+        priceElement.textContent = priceElement.dataset.originalPrice;
+    }
+
     const handleCategory = (event) => {
         const pathName = window.location.pathname;
         const category = parseInt(pathName.split('/')[2]);

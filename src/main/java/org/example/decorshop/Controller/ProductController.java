@@ -77,6 +77,7 @@ public class ProductController {
         sameProducts.remove(product);
         Product fistProduct = sameProducts.iterator().next();
         sameProducts.remove(fistProduct);
+        model.addAttribute("quantity", 1);
         model.addAttribute("fistProduct", fistProduct);
         model.addAttribute("sameProducts", sameProducts);
         model.addAttribute("product", product);
