@@ -21,7 +21,7 @@
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
 
-                                <form method="post" th:action="@{/auth/login}">
+                                <form method="post" th:action="@{/login}">
 
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -31,25 +31,25 @@
                                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example17">Email address</label>
-                                        <input type="email" id="form2Example17" class="form-control form-control-lg" name="email" />
+                                        <label class="form-label" for="form2Example17">Tên đăng nhập</label>
+                                        <input type="text" id="form2Example17" class="form-control form-control-lg" name="username" />
 <!--                                        <p style="color: red; font-size: 12px;" th:if="${error} != null " th:text="'*' + ${error}"></p>-->
 <!--                                        <p style="color: red; font-size: 12px;" th:if="${err} != null" th:text="'*' + ${err}"></p>-->
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example27">Password</label>
+                                        <label class="form-label" for="form2Example27">Mật khẩu</label>
                                         <input type="password" id="form2Example27" class="form-control form-control-lg" name="password" />
 <!--                                        <p style="color: red; font-size: 12px;" th:if="${error} != null " th:text="'*' + ${error}"></p>-->
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Đăng nhập</button>
                                     </div>
 
-                                    <a class="small" style="margin-top: 5px; margin-bottom: 10px; color: blue;" th:href="@{/forgot-password}">Forgot password?</a>
-                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?
-                                        <a th:href="@{/register}"style="color: #393f81;">Register here</a></p>
+                                    <a class="small" style="margin-top: 5px; margin-bottom: 10px; color: blue;" th:href="@{/forgot-password}">Quên mật khẩu</a>
+                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Bạn chưa có tài khoản
+                                        <a th:href="@{/register}"style="color: #393f81;">Đăng ký ngay</a></p>
 <!--                                    <a th:href="@{/admin-login}">Login with Admin</a>-->
                                 </form>
 

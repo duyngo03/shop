@@ -20,7 +20,7 @@
 }
 
 #keyword {
-    width: 500px;
+    width: 450px;
     border-right-style: none;
     border-top-right-radius: 0%;
     border-bottom-right-radius: 0%;
@@ -108,4 +108,14 @@
 }
 a {
     text-decoration: none;
+}
+.navbar_user {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding-left: 0;
+
+}
+.navbar_user i {
+    color: #1e1e27;
 }
