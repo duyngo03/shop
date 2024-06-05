@@ -14,16 +14,21 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
-    @GetMapping("/{cartId}")
-    public String viewCart(@PathVariable Integer cartId, Model model) {
-        Cart cart = cartService.getCartById(cartId);
-        model.addAttribute("cart", cart);
+    @GetMapping("")
+    public String viewCart( Model model) {
+        model.addAttribute("cart", cartService.getCartForCurrentUser());
+//        model.addAttribute("cart", cart);
         return "cart";
     }
 
-    @PostMapping("/{cartId}/add")
-    public String addToCart(@PathVariable Integer cartId, @RequestParam Integer productId, @RequestParam int quantity) {
-        cartService.addToCart(cartId, productId, quantity);
-        return "redirect:/cart/" + cartId;
+    @PostMapping("/add")
+    public String addToCart(@RequestParam Integer productId, @RequestParam int quantity) {
+        cartService.addToCart (productId, quantity);
+        return "redirect:/cart";
     }
+//    @GetMapping("/products")
+//    public String listProducts(Model model) {
+//        model.addAttribute("products", productRepository.findAll());
+//        return "products";
+//    }
 }

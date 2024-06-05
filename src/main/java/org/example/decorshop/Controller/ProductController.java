@@ -29,7 +29,6 @@ public class ProductController {
     public String showCreateProductForm(Model model) {
         ProductCreateDTO productCreateDTO = new ProductCreateDTO();
         List<Category> categories = categoryService.findAll();
-        System.out.println(categories);
         model.addAttribute("productCreateDTO", productCreateDTO);
         return "create-product";
     }
@@ -53,11 +52,9 @@ public class ProductController {
             for(int i = 0; i < categoryNames.length; i++) {
 //                Category category = categoryService.findByName(categoryNames[i]);
                 Category category  = categoryService.findById(Integer.parseInt(categoryNames[i])).orElseThrow(() -> new RuntimeException("Category not found: "));
-                System.out.println(category);
                 categories.add(category);
             }
             product.setCategories(categories);
-            System.out.println(product);
             productService.save(product);
 
         } catch (Exception e) {

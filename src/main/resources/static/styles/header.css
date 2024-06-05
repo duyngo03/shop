@@ -119,3 +119,7 @@ a {
 .navbar_user i {
     color: #1e1e27;
 }
+.navbar_user :hover {
+    color: #b5aec4;
+    cursor: pointer;
+}

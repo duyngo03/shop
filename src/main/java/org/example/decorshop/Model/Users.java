@@ -2,9 +2,12 @@ package org.example.decorshop.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "users")
 public class Users {
 
@@ -33,6 +36,7 @@ public class Users {
     @Column(name = "role")
     private String role;
 
-//    @OneToOne(mappedBy = "user")
-//    private Cart cart;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Cart cart;
 }

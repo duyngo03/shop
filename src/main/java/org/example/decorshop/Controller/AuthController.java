@@ -24,7 +24,6 @@ public class AuthController {
     @GetMapping("/welcome-success")
     public String processLogin(Model model) {
         Users userDetail=  (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(userDetail);
         model.addAttribute("userDetail", userDetail);
         return "redirect:/";
     }

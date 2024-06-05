@@ -6,5 +6,9 @@
 </head>
 <body>
 <h1>cart</h1>
+<div th:each=" cartItem : ${cart.getItems()}">
+    <div th:text="${cartItem.product.name}"></div>
+    <div th:text="${cartItem.quantity}"></div>
+</div>
 </body>
 </html>
