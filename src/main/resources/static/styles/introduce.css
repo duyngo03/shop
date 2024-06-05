@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+}
+.introduce {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    flex-direction: column;
+    margin: 0 33%;
+    gap:30px;
+    width: 660px;
+}
+.introduce-title {
+    /*text-align: center;*/
+    margin-top: 30px;
+}
+.introduce-img {
+    display: flex;
+    justify-content: center;
+}
+.bold {
+    font-weight: bold;
+}
+.introduce p {
+    font-size: 14px;
+    margin: 0;
+}

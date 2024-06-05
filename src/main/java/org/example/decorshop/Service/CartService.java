@@ -63,6 +63,24 @@ public class CartService {
         return user.getCart();
     }
 
+    @Transactional
+    public void removeFromCart(Integer productId) {
+        String username = getCurrentUsername();
+        Users user = userService.findByUserName(username).orElseThrow(() -> new RuntimeException("User not found"));
+        Cart cart = user.getCart();
+        if(cart == null) {
+            return;
+        }
+        List<CartItem> items = cart.getItems();
+        if(items == null) {
+            return;
+        }
+        items.removeIf(item -> item.getProduct().getId() == productId);
+
+//        items.removeIf(item -> item.getProduct().getId().equals(productId));
+        cartRepository.save(cart);
+    }
+
     private String getCurrentUsername() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {

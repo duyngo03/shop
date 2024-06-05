@@ -72,10 +72,9 @@
                             </ul>
                         </li>
                         <li><a th:href="@{/blog}">Mẹo|Bài viết</a></li>
-                        <li><a th:href="@{/blog}">Giới thiệu</a></li>
+                        <li><a th:href="@{/introduce}">Giới thiệu</a></li>
                         <li><a th:href="@{/contact}">Liên hệ</a></li>
                     </ul>
-
                     <ul class="navbar_user">
                         <li th:if="${username == 'anonymousUser'}"><a th:href="@{/login}"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                         <li th:if="${username != 'anonymousUser'}"><a th:href="@{/logout}"><i class="fa-solid fa-right-from-bracket"></i></a></li>
@@ -84,6 +83,33 @@
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </a>
                         </li>
+<!--                        <li th:if="${cart.getItems != null || cart == null}" class="checkout" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">-->
+<!--&lt;!&ndash;                            <a th:href="@{/cart}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                &ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+<!--                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+<!--                        </li>-->
+<!--                        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">-->
+<!--                            <div class="offcanvas-header cart-title">-->
+<!--                                <h5 class="offcanvas-title title" id="offcanvasWithBothOptionsLabel">-->
+<!--                                    <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</h5>-->
+<!--                                <button type="button" class="btn-close btn-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--                            </div>-->
+<!--                            <div class="cart-content">-->
+<!--                                <div class="cart-item">-->
+<!--                                    <div class="cart-item-image">-->
+<!--                                        <img src="/image/tshirt.png" alt="item1">-->
+<!--                                    </div>-->
+<!--                                    <div class="cart-item-info">-->
+<!--                                        <div class="cart-item-name">Đồng hồ treo tường</div>-->
+<!--                                        <div class="cart-item-price">1.000.000đ</div>-->
+<!--                                        <div class="cart-item-quantity">Số lượng: <span>1</span></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <a th:href="@{/cart}">Xem giỏ hàng</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </ul>
                     <!--                    <div class="hamburger_container">-->
                     <!--                        <i class="fa fa-bars" aria-hidden="true"></i>-->

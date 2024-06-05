@@ -1,9 +1,7 @@
 package org.example.decorshop.Model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
@@ -39,4 +37,16 @@ public class Users {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Cart cart;
+
+    public Users(String userName, String first_name, String last_name, String email, String password) {
+        this.userName = userName;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.password = password;
+    }
+
+    public Users() {
+
+    }
 }

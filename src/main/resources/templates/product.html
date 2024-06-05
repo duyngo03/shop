@@ -27,14 +27,9 @@
                     <button type="button" onclick="increaseQuantity()">+</button>
                 </div>
                 <input type="hidden" name="productId" th:value="${product.id}"/>
+                <input type="hidden" name="currentUrl" th:attr="value='@{/product/' + ${product.id} + '}'"/>
                 <button type="submit" class="add-to-cart">Thêm vào giỏ hàng</button>
             </form>
-<!--            <div class="quantity">-->
-<!--                <button onclick="decreaseQuantity()">-</button>-->
-<!--                <input type="text" id="quantity" th:value="${quantity}" readonly/>-->
-<!--                <button onclick="increaseQuantity()">+</button>-->
-<!--            </div>-->
-<!--            <button type="submit" class="add-to-cart">Thêm vào giỏ hàng</button>-->
             <p>
                 <span class="calling">Gọi đặt hàng: </span>
                 <span class="phone-number">0123456789</span>

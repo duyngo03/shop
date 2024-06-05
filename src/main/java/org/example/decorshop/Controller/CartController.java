@@ -22,13 +22,21 @@ public class CartController {
     }
 
     @PostMapping("/add")
-    public String addToCart(@RequestParam Integer productId, @RequestParam int quantity) {
+    public String addToCart(@RequestParam Integer productId, @RequestParam int quantity,@RequestParam String currentUrl, Model model) {
         cartService.addToCart (productId, quantity);
-        return "redirect:/cart";
+        model.addAttribute("message", "Sản phẩm đã được thêm vào giỏ hàng!");
+        return "redirect:" + currentUrl;
     }
 //    @GetMapping("/products")
 //    public String listProducts(Model model) {
 //        model.addAttribute("products", productRepository.findAll());
 //        return "products";
 //    }
+
+    @PostMapping("/remove")
+    public String removeFromCart(@RequestParam Integer productId, Model model) {
+        cartService.removeFromCart(productId);
+        model.addAttribute("message", "Sản phẩm đã được xóa khỏi giỏ hàng!");
+        return "redirect:/cart";
+    }
 }
